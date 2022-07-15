@@ -1,5 +1,6 @@
 package com.atguigu.springcloud.alibaba.service;
 
+import com.atguigu.springcloud.alibaba.service.impl.PaymentFallbackService;
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import org.springframework.cloud.openfeign.FeignClient;

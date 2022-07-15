@@ -1,5 +1,6 @@
-package com.atguigu.springcloud.alibaba.service;
+package com.atguigu.springcloud.alibaba.service.impl;
 
+import com.atguigu.springcloud.alibaba.service.PaymentFeignService;
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import org.springframework.stereotype.Component;
