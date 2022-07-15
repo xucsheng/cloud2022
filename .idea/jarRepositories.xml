@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="alicloud" />
+      <option name="name" value="alicloud" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="hwmaven" />
+      <option name="name" value="hwmaven" />
+      <option name="url" value="https://repo.huaweicloud.com/repository/maven/huaweicloudsdk/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="wiotplanet" />
+      <option name="name" value="wiotplanet" />
+      <option name="url" value="https://nexus.wiotplanet.com/repository/maven-releases/" />
+    </remote-repository>
+  </component>
+</project>
