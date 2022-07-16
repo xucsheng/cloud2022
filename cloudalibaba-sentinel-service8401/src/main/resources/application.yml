@@ -1,8 +1,8 @@
 server:
-  port: 84
+  port: 8401
 spring:
   application:
-    name: nacos-order-consumer
+    name: cloudalibaba-sentinel-service
   cloud:
     nacos:
       discovery:
@@ -14,9 +14,40 @@ spring:
         dashboard: localhost:8080
         # 默认8719端口，假如被占用自动从8719开始依次+1扫描，直至找到未被占用的端口
         port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            data-id: cloudalibaba-sentinel-service
+            data-type: json
+            rule-type: flow
+
 
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+
+feign:
+  sentinel:
+    enabled: true # 激活sentinel对feign的支持
+# nacos json sentinel 配置
+#  [
+#    {
+#      "resource":"/rateLimit/byUrl",
+#      "limitApp":"default",
+#      "grade":1,
+#      "count":1,
+#      "strategy":0,
+#      "controlBehavior":0,
+#      "clssterMode":false
+#    }
+#  ]
+#  resource:资源名称
+#  limitApp：来源应用
+#  grade：阈值类型，0：表示线程数，1：表示QPS；
+#  count：单机阈值
+#  strategy：流控模式 0：表示直接，1：表示关联 2：表示链路
+#  controlBehavior：流控效果，0：表示快速失败，1：表示Warm up， 2：表示排队等待
+#  clssterMode：是否集群
