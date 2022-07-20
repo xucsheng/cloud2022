@@ -6,12 +6,16 @@ spring:
   application:
     name: seata-order-service
   cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
     alibaba:
       seata:
-        tx-service-group: fsp_tx_group #自定义事务组名称需要与seata-server中的对应
-    nacos:
-      discovery:
-        server-addr: localhost:8848
+        tx-service-group: my_test_tx_group
+
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
