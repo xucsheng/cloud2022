@@ -5,6 +5,7 @@ import com.atguigu.springcloud.domain.Order;
 import com.atguigu.springcloud.service.AccountService;
 import com.atguigu.springcloud.service.OrderService;
 import com.atguigu.springcloud.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -30,6 +31,7 @@ public class OrderServiceImpl implements OrderService {
      */
 
     @Override
+    @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)
     public void create(Order order) {
         // 1 创建订单
         log.info("----->开始创建订单");
