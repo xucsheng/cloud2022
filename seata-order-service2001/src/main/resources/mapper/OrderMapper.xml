@@ -14,7 +14,7 @@
 
     <insert id="create">
         insert into t_order (user_id, product_id, count, money, status)
-            value  ( #{userId},#{productId},#{count},#{money},0)
+            value  ( #{userId},#{productId},#{count},#{money},1)
     </insert>
 
     <update id="update">
